@@ -3,39 +3,28 @@ let words = [];
 let font;
 let btn;
 
-var rules = {
-  "A":["C","F","E"],
-  "C":["G","E"],
-  "E":["C","G"],
-  "F":["A","C"],
-  "G":["E","F","C"]
-};
 
-var seqIndex = 0;
-var noteIndex = -1;
-let initSeq = ["C"];
-let newTokens = [];
-let sequences = [initSeq, []];
-let maxNumSequences = 8;
-let maxSequenceLength = 30;
 
-function preload(){
-	font = loadFont("assets/CourierNew.ttf");  
-  lines = loadStrings("assets/soares.txt"); 
+
+function preload(){ 
+  handWrite = loadFont("Fonts/HandWrite.ttf");  
+  anonymousPro = loadFont("Fonts/AnonymousPro.ttf");  
+	courierNew = loadFont("Fonts/CourierNew.ttf");  
+  dadaDict = loadStrings("Dict/alexSearch.txt");
+  fingimentoDict = loadStrings('Dict/fingimento.txt'); 
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  //createCanvas(800, 800)
-
-  fill(255);
-  textFont(font);
-  textSize(20);
-  //textAlign(CENTER);
+  
+  fill(255);  
+  //textSize(32);  
+  //text("que apetece escrever hoje?");
+  
   
   // slice up text from source into array
-  for (let i = 0; i < lines.length; i++) {
-    let pieces = split(lines[i], " ");
+  for (let i = 0; i < dadaDict.length; i++) {
+    let pieces = split(dadaDict[i], " ");
     // Add the pieces to the larger array;
     for (let j = 0; j < pieces.length; j++) {
       let word = pieces[j];
@@ -45,12 +34,11 @@ function setup() {
     }
   }
 
-  //detect witch button is clicked by user
-  document.querySelectorAll('button').forEach(occurence => {
+  //detect witch button is clicked 
+document.querySelectorAll('button').forEach(occurence => {
     let id = occurence.getAttribute('id');
      occurence.addEventListener('click', function() {
-       console.log('The button with ID ' + id + ' was clicked!')   
- 
+       console.log('The button with ID ' + id + ' was clicked!')    
        switch (id) {
          case 'nostalgia':           
            btn = 'nostalgia';
@@ -72,14 +60,9 @@ function setup() {
            break;   
          default:
            console.log(`Sorry, we are out of ${id}.`);
-       }
-       console.log(btn);
+       }      
      } );
    });
-
-   //background generative sounds 
-   synth = new p5.PolySynth();
-   sloop = new p5.SoundLoop(soundLoop, 0.7); 
 
 }
 
@@ -88,11 +71,11 @@ function windowResized() {
 }
 
 function draw() { 
-   // togglePlayPause();   
+   
 }
 
 //detect witch button is pressed and execute new instructions
-function mousePressed() { 
+function mouseClicked() { 
     switch (btn) {      
       case 'nostalgia':
         setup();
@@ -108,31 +91,41 @@ function mousePressed() {
       break;
       case 'fingimento':
         setup();
-        console.log('develop next step');
+        generateFingimentoText();
+        shuffle(fingimentoDict, true);
       break;
       case 'dada':           
-        generateDadaText();
-       // togglePlayPause(); 
+        generateDadaText();      
         loop();
       break;     
       default:
         console.log("no button pressed");
         break;
-    }  
-    
+    }      
 }
 
-function keyPressed() {
-  if (keyCode === UP_ARROW) {
-    //vid.loop();
-    //vid.speed(1);
-  } else if (keyCode === DOWN_ARROW) {
-    //vid.stop();
+function btnDada() {
+    setup();
+    generateDadaText();      
+    loop();
+}
+
+// generate dada poetry
+function generateFingimentoText() {
+  textFont(handWrite);
+  textSize(44);
+  for (let i = 0; i < fingimentoDict.length; i++) {
+    fill(128+(i*10));
+    text(fingimentoDict[i], 60, 50+i*30);
   }
 }
 
+// generate dada poetry
 function generateDadaText() {
   background(0);  
+  textSize(32);
+  textFont(courierNew);
+
   let i = 0; 
   let j = 0;
   let sentenceLength = 0;
@@ -166,55 +159,6 @@ function generateDadaText() {
       poemLength--;             
     }      
   } 
-}
-
-function soundLoop(cycleStartTime) {
-  noteIndex++;
-  if (noteIndex >= min(sequences[seqIndex].length, maxSequenceLength)) {
-    nextSequence();
-  }
-  var token = sequences[seqIndex][noteIndex];
-
-  var pitch = token + "4";
-  var velocity = 0.6;
-  var beatSeconds = 0.4; // Define 1 beat as half a second
-  var duration = random([beatSeconds, beatSeconds/2, beatSeconds/2, beatSeconds/4]);
-  this.interval = duration;
-  synth.play(pitch, velocity, cycleStartTime, duration);
-
-  newTokens = rules[token];
-  sequences[seqIndex+1] = sequences[seqIndex+1].concat(newTokens);
-  // If the sequence overruns maxSequenceLength, truncate it and proceed to next sequence
-  if (sequences[seqIndex+1].length >= maxSequenceLength) {
-    sequences[seqIndex+1] = sequences[seqIndex+1].slice(0, maxSequenceLength);
-    nextSequence();
-  }
-}
-
-function stepSoundLoop() {
-  sloop.stop();
-  soundLoop(0);
-}
-
-function togglePlayPause() {
-  // Play/pause
-  if (sloop.isPlaying) {
-    sloop.pause();
-  } else {
-    sloop.maxIterations = Infinity;
-    sloop.start();
-  }
-}
-
-function nextSequence() {
-  noteIndex = 0;
-  seqIndex++;
-  sequences.push([]); // Add a new empty sequence
-  // If the number of sequences overruns maxNumSequences, remove oldest
-  if (sequences.length > maxNumSequences) {
-    seqIndex--;
-    sequences.shift(); // Removes first element from array
-  }
 }
 
 

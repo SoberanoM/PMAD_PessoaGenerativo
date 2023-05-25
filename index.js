@@ -1,7 +1,7 @@
 var titulo = "Pessoa Generativo.\n\n\n\"Como sabemos o que será, se nem ele sabe o que foi?\""
 
 function preload(){
-	font = loadFont("assets/CourierNew.ttf");   
+	font = loadFont("Fonts/CourierNew.ttf");   
 }
 
 function setup() { 
@@ -21,6 +21,3 @@ function draw() {
     text(titulo, 150, 150, 400, 400);    
 }
 
-function next() {   
-    window.open("pessoaGenerativo.html", "_self");
-}
