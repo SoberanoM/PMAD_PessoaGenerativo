@@ -1,7 +1,7 @@
 let lines = [];
 let words = [];
 let font;
-let autor;
+let btn;
 
 var rules = {
   "A":["C","F","E"],
@@ -52,28 +52,28 @@ function setup() {
        console.log('The button with ID ' + id + ' was clicked!')   
  
        switch (id) {
-         case 'pessoa':           
-           autor = 'pessoa';
+         case 'nostalgia':           
+           btn = 'nostalgia';
            break;
-           case 'campos':           
-           autor = 'campos';
+           case 'fragmentacao':           
+           btn = 'fragmentacao';
            break;
-           case 'caeiro':           
-           autor = 'caeiro';
+           case 'dor':           
+           btn = 'dor';
            break;
-           case 'reis':           
-           autor = 'reis';
+           case 'fingimento':           
+           btn = 'fingimento';
            break;
-           case 'soares':           
-           autor = 'soares';
+           case 'dada':           
+           btn = 'dada';
            break;
-           case 'search':           
-           autor = 'search';
+           case 'restart':           
+           btn = 'restart';
            break;   
          default:
            console.log(`Sorry, we are out of ${id}.`);
        }
-       console.log(autor);
+       console.log(btn);
      } );
    });
 
@@ -91,15 +91,35 @@ function draw() {
    // togglePlayPause();   
 }
 
+//detect witch button is pressed and execute new instructions
 function mousePressed() { 
-  if (autor === 'soares') {
-    generateSoaresText();
-    togglePlayPause(); 
-    loop();
-  } else {
-    setup();
-    console.log('develop next step');
-  }
+    switch (btn) {      
+      case 'nostalgia':
+        setup();
+        console.log('develop next step');
+      break;
+      case 'fragmentacao':
+        setup();
+        console.log('develop next step');
+      break;
+      case 'dor':
+        setup();
+        console.log('develop next step');
+      break;
+      case 'fingimento':
+        setup();
+        console.log('develop next step');
+      break;
+      case 'dada':           
+        generateDadaText();
+       // togglePlayPause(); 
+        loop();
+      break;     
+      default:
+        console.log("no button pressed");
+        break;
+    }  
+    
 }
 
 function keyPressed() {
@@ -111,9 +131,8 @@ function keyPressed() {
   }
 }
 
-function generateSoaresText() {
-  background(0);
-  
+function generateDadaText() {
+  background(0);  
   let i = 0; 
   let j = 0;
   let sentenceLength = 0;
