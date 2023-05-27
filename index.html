@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="images/fpessoa.ico">
     
-    <title>Pessoa Generativo</title>
+    <title>Não sei quantas almas tenho</title>
 
     <link rel="stylesheet" type="text/css" href="style.css">
 
+    
     <script src="libraries/p5.min.js"></script>
     <script src="libraries/p5.dom.js"></script>
     <script src="libraries/p5.sound.min.js"></script>
@@ -17,12 +18,14 @@
   </head>
 
   <body>
-    <script src="index.js"></script>
-    <h3>Pessoa Generativo</h3>    
+    <script src="index.js"></script>    
+    <div>     
+      <h2 class="indexStartTip" style="font-family: 'Courier New'">Para iniciar clique aqui.</h2>    
+    </div>       
     <img src="images/TomasXavier.png" alt="tomas1" width="600" height="600"> 
-    <div>          
-      <button class="introNext" onClick="location.href='tomasXavier.html'"><img src="images/next.png"/></button>
+    <div id="footerButtons" >     
+      <button id="seguinte" onClick="location.href='initialVideo.html'" class="indexNextButton generateButtons button5">Seguinte</button>      
     </div>    
-   <!-- <img class="mouseMoveTip" src="images/mouseMoveTip.png" alt="moveMouseTip" width="80" height="80"> -->
+      <!-- <img class="mouseMoveTip" src="images/mouseMoveTip.png" alt="moveMouseTip" width="80" height="80"> -->
   </body>
 </html>
