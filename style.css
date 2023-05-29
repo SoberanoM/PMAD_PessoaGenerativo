@@ -97,7 +97,7 @@ canvas {
 #footerButtons {
   position: fixed;
   bottom: 20px;
-  text-align: center;
+  left: 100px;
 }
 
 .generateButtons {    
