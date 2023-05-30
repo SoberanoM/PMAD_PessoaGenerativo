@@ -2,10 +2,10 @@ var titulo = "Pessoa Generativo.\n\n\n\"Como sabemos o que será, se nem ele sab
 let fp1, fp2;
 
 function preload(){
-	font = loadFont("Fonts/CourierNew.ttf");  
+	font = loadFont("fonts/CourierNew.ttf");  
     soundFormats('mp3', 'ogg');
-    fp1 = loadSound('som/fp1');
-    fp2 = loadSound('som/fp2');
+    fp1 = loadSound('audios/fp1');
+    fp2 = loadSound('audios/fp2');
 }
 
 function setup() { 

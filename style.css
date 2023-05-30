@@ -8,10 +8,8 @@ html, body {
 body {
   margin: 0;
   display: flex;
-
   /* This centers our sketch horizontally. */
   justify-content: center;
-
   /* This centers our sketch vertically. */
   align-items: center;
 }
@@ -20,7 +18,7 @@ canvas {
   display: block;
 }
 
-/* index.css */
+/* INDEX CSS */
 
 /*.mouseMoveTip {
   position: fixed;
@@ -42,7 +40,7 @@ canvas {
   right: 620px;
 }
 
-/* tomasXavier.css */
+/* INITIAL VIDEO CSS */
 
 .buttons {
   border: none;
@@ -92,7 +90,7 @@ canvas {
   right: 30px;
 }
 
-/* generatePoetry.css */
+/* GENERATE POETRY CSS */
 
 #footerButtons {
   position: fixed;
@@ -189,5 +187,11 @@ canvas {
 .button7:hover {
   background-color: #0595abf0;
   color: white;
+}
+
+.videoPosition {
+  position: fixed;
+  top: 150px;
+  right: 30px;
 }
 

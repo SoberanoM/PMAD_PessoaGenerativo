@@ -7,11 +7,11 @@ let btn;
 
 
 function preload(){ 
-  handWrite = loadFont("Fonts/HandWrite.ttf");  
-  anonymousPro = loadFont("Fonts/AnonymousPro.ttf");  
-	courierNew = loadFont("Fonts/CourierNew.ttf");  
-  dadaDict = loadStrings("Dict/alexSearch.txt");
-  fingimentoDict = loadStrings('Dict/fingimento.txt'); 
+  handWrite = loadFont("fonts/HandWrite.ttf");  
+  anonymousPro = loadFont("fonts/AnonymousPro.ttf");  
+	courierNew = loadFont("fonts/CourierNew.ttf");  
+  dadaDict = loadStrings("dictionary/alexSearch.txt");
+  fingimentoDict = loadStrings('dictionary/fingimento.txt'); 
 }
 
 function setup() {

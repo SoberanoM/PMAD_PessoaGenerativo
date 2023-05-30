@@ -3,7 +3,7 @@ var video;
 function setup() { 
   
     noCanvas();
-    video = createVideo("Videos/intro.webm");
+    video = createVideo("videos/intro.webm");
     video.size(1000, 1400); 
     //video.play();
     video.showControls();
