@@ -4,8 +4,6 @@ let font;
 let btn;
 
 
-
-
 function preload(){ 
   handWrite = loadFont("fonts/HandWrite.ttf");  
   anonymousPro = loadFont("fonts/AnonymousPro.ttf");  
@@ -74,9 +72,14 @@ function draw() {
    
 }
 
+function download() {
+  saveCanvas(cnv,"poem","png");
+}
+
 //detect witch button is pressed and execute new instructions
 function mouseClicked() { 
-    switch (btn) {      
+  fullscreen(true);  
+  switch (btn) {      
       case 'nostalgia':
         setup();
         console.log('develop next step');
@@ -110,7 +113,7 @@ function btnDada() {
     loop();
 }
 
-// generate dada poetry
+// generate fingimento poetry
 function generateFingimentoText() {
   textFont(handWrite);
   textSize(44);

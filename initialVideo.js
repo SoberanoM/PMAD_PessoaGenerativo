@@ -1,26 +1,34 @@
 var video;
 
-function setup() { 
-  
-    noCanvas();
-    video = createVideo("videos/intro.webm");
-    video.size(1000, 1400); 
-    //video.play();
+function setup() {   
+    noCanvas();   
+    video = createVideo("videos/EntradaTomas.mp4");  
+    video.play(); 
+    video.size(1400, 800);     
     video.showControls();
-    //video.onended(video.hide());   
+    video.onended(goToPoemario);   
 }
 
+//go to generate poetry page
+function goToPoemario() {
+  window.open("generatePoetry.html","_self");
+}
+
+function mouseClicked() {
+  fullscreen(true); 
+}
+
+
+
+//não estão a ser utilizados
+
+/*
 function next() {
   video.hide(); 
 }
 
-//display alert message
-function sayDone(elt) {
-  alert('done playing ' + elt.src);
-}
-
 function playVideoIntro() { 
-  video.loop();
+  video.loop(); 
   video.speed(1);
 }
 
@@ -30,7 +38,7 @@ function stopVideoIntro() {
 
 function pauseVideoIntro() {
   video.pause();
-}
+} 
 
 //starts and stops video with arrow up and down (optional)
 function keyPressed() {
@@ -42,4 +50,5 @@ function keyPressed() {
   }
 }
 
+*/
 

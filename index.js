@@ -1,22 +1,34 @@
 var titulo = "Pessoa Generativo.\n\n\n\"Como sabemos o que será, se nem ele sabe o que foi?\""
 let fp1, fp2;
+let style;
 
 function preload(){
 	font = loadFont("fonts/CourierNew.ttf");  
     soundFormats('mp3', 'ogg');
     fp1 = loadSound('audios/fp1');
-    fp2 = loadSound('audios/fp2');
+    fp2 = loadSound('audios/fp2');   
 }
 
-function setup() { 
-    createCanvas(800, 800);    
-    
+function setup() {      ;
+    createCanvas(800, 800);
+    fp1.onended(enableButton);               
 }
 
-function mouseClicked(){     
-        fp1.play();
-        fp2.play();      
+function mouseClicked(){   
+    fullscreen(true); 
+    if (!fp1.isPlaying()) {
+        fp1.play();      
+    } else {
+        console.log("voices are still playing");
+    }               
 }
+
+function enableButton() {
+   // document.querySelector('#seguinte').disabled = true;
+    document.querySelector("#seguinte").style.visibility = "visible";
+    //document.querySelector("#seguinte").classList.add("generateButtons button5");
+}
+
 
 //exibir título
 function draw() {   
@@ -26,6 +38,7 @@ function draw() {
     textAlign(LEFT);
     textSize(44);
     textLeading((mouseY / width) * 64);     
-    text(titulo, 150, 150, 400, 400);    
+    text(titulo, 150, 150, 400, 400);         
 }
 
+ 

@@ -9,7 +9,6 @@
 
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    
     <script src="libraries/p5.min.js"></script>
     <script src="libraries/p5.dom.js"></script>
     <script src="libraries/p5.sound.min.js"></script>
@@ -20,14 +19,14 @@
   <body>
     <script src="index.js"></script>    
     <div>     
-    <h2 class="indexStartTip" style="font-family: 'Courier New'">Para iniciar clicar aqui.</h2> 
+      <!--<h2 class="indexStartTip" style="font-family: 'Courier New'">Para iniciar clicar aqui.</h2> -->
     </div>    
     <video width="600" height="600" controls autoplay loop>
       <source src="/videos/fpgenerativo.mp4" type="video/mp4">     
     </video>   
-   <!-- <img src="images/TomasXavier.png" alt="tomas1" width="600" height="600"> -->
+    <embed src="/audios/typewriter.mp3" autostart="true" width="2" height="0">     
     <div id="footerButtons" >     
-      <button id="seguinte" onClick="location.href='initialVideo.html'" class="indexNextButton generateButtons button5">Seguinte</button>      
+      <button id="seguinte" style="visibility: hidden" type="button" onClick="location.href='initialVideo.html'" class="indexNextButton generateButtons button5">Seguinte</button>  <!--disabled-->    
     </div>    
       <!-- <img class="mouseMoveTip" src="images/mouseMoveTip.png" alt="moveMouseTip" width="80" height="80"> -->
   </body>
