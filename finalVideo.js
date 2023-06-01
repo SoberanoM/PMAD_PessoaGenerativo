@@ -2,7 +2,7 @@ var video;
 
 function setup() { 
   noCanvas();   
-  video = createVideo("videos/EntradaTomas.mp4");  
+  video = createVideo("videos/saidaTomas.mp4");  
   video.play(); 
   video.size(1400, 800);     
   video.showControls();
@@ -13,7 +13,6 @@ function setup() {
 function backToStart() {
   window.open("index.html","_self");
 }
-
 
 function mouseClicked() {
   fullscreen(true); 

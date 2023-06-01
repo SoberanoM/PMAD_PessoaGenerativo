@@ -11,15 +11,15 @@ function preload(){
 
 function setup() {      ;
     createCanvas(800, 800);
-    fp1.onended(enableButton);               
+    fp2.onended(enableButton);               
 }
 
 function mouseClicked(){   
     fullscreen(true); 
-    if (!fp1.isPlaying()) {
-        fp1.play();      
+    if (!fp2.isPlaying()) {
+        fp2.play();      
     } else {
-        console.log("voices are still playing");
+        console.log("Pessoa is still thinking!!!");
     }               
 }
 
