@@ -5,13 +5,13 @@ let style;
 function preload(){
 	font = loadFont("assets/CourierNew.ttf");  
     soundFormats('mp3', 'ogg');
-    type = loadSound('assets/typewriter.mp3');
+    //type = loadSound('assets/typewriter.mp3');
     fp1 = loadSound('assets/fp1');
     fp2 = loadSound('assets/fp2');   
 }
 
 function setup() {      ;
-    type.play();
+    //type.play();
     createCanvas(800, 800);
     fp2.onended(enableButton);               
 }
