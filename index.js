@@ -11,7 +11,7 @@ function preload(){
 }
 
 function setup() {      ;
-   // type.play(); 
+    type.play(); 
     createCanvas(800, 800);
     fp2.onended(enableButton);               
 }
