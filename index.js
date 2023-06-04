@@ -3,10 +3,10 @@ let fp1, fp2;
 let style;
 
 function preload(){
-	font = loadFont("fonts/CourierNew.ttf");  
+	font = loadFont("assets/CourierNew.ttf");  
     soundFormats('mp3', 'ogg');
-    fp1 = loadSound('audios/fp1');
-    fp2 = loadSound('audios/fp2');   
+    fp1 = loadSound('assets/fp1');
+    fp2 = loadSound('assets/fp2');   
 }
 
 function setup() {      ;

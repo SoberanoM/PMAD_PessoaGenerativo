@@ -2,7 +2,7 @@ var video;
 
 function setup() { 
   noCanvas();   
-  video = createVideo("videos/saidaTomas.mp4");  
+  video = createVideo("assets/saidaTomas.mp4");  
   video.play(); 
   video.size(1400, 800);     
   video.showControls();

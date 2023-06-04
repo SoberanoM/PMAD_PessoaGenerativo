@@ -5,11 +5,11 @@ let btn;
 
 
 function preload(){ 
-  handWrite = loadFont("fonts/HandWrite.ttf");  
-  anonymousPro = loadFont("fonts/AnonymousPro.ttf");  
-	courierNew = loadFont("fonts/CourierNew.ttf");  
-  dadaDict = loadStrings("dictionary/alexSearch.txt");
-  fingimentoDict = loadStrings('dictionary/fingimento.txt'); 
+  handWrite = loadFont("assets/HandWrite.ttf");  
+  anonymousPro = loadFont("assets/AnonymousPro.ttf");  
+	courierNew = loadFont("assets/CourierNew.ttf");  
+  dadaDict = loadStrings("assets/alexSearch.txt");
+  fingimentoDict = loadStrings('assets/fingimento.txt'); 
 }
 
 function setup() {
