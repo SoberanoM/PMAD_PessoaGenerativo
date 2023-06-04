@@ -11,11 +11,16 @@ function preload(){
 }
 
 function setup() {      ;
-    if (!fp2.isPlaying()) {
-        type.play();      
-    }
+   // type.play(); 
     createCanvas(800, 800);
     fp2.onended(enableButton);               
+}
+
+function mouseMoved(event) {
+    console.log(event);
+    if (!type.isPlaying()) {
+        type.play();      
+    }   
 }
 
 function mouseClicked(){   
