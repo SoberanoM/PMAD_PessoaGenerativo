@@ -85,13 +85,14 @@ canvas {
   right: 30px;
 }
 
+
+/* GENERATE POETRY CSS */
+
 .nextButton {
   position: fixed;
   bottom: 20px;
   right: 30px;
 }
-
-/* GENERATE POETRY CSS */
 
 #footerButtons {
   position: fixed;
@@ -102,7 +103,7 @@ canvas {
 .downloadButton {
   position: fixed;
   bottom: 20px;
-  right: 300px;
+  right: 130px;
 }
 
 .generateButtons {    

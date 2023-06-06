@@ -3,7 +3,6 @@ let words = [];
 let font;
 let btn;
 
-
 function preload(){ 
   handWrite = loadFont("assets/HandWrite.ttf");  
   anonymousPro = loadFont("assets/AnonymousPro.ttf");  
@@ -13,12 +12,8 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  
-  fill(255);  
-  //textSize(32);  
-  //text("que apetece escrever hoje?");
-  
+  myCanvas = createCanvas(800, 800);
+  fill(255); //text 
   
   // slice up text from source into array
   for (let i = 0; i < dadaDict.length; i++) {
@@ -32,7 +27,7 @@ function setup() {
     }
   }
 
-  //detect witch button is clicked 
+//detect witch button is clicked 
 document.querySelectorAll('button').forEach(occurence => {
     let id = occurence.getAttribute('id');
      occurence.addEventListener('click', function() {
@@ -61,19 +56,18 @@ document.querySelectorAll('button').forEach(occurence => {
        }      
      } );
    });
+  }
 
-}
-
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
-
+/*function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+}*/
+  
 function draw() { 
-   
+ 
 }
 
 function download() {
-  saveCanvas(cnv,"poem","png");
+  saveCanvas(myCanvas,"PessoaGenerativo","png");
 }
 
 //detect witch button is pressed and execute new instructions
@@ -86,7 +80,8 @@ function mouseClicked() {
       break;
       case 'fragmentacao':
         setup();
-        console.log('develop next step');
+        window.open("fragmentacao.html","_self");
+        console.log('Gerar texto com tema Fragemntação');
       break;
       case 'dor':
         setup();
@@ -113,6 +108,7 @@ function btnDada() {
     loop();
 }
 
+
 // generate fingimento poetry
 function generateFingimentoText() {
   textFont(handWrite);
@@ -126,7 +122,7 @@ function generateFingimentoText() {
 // generate dada poetry
 function generateDadaText() {
   background(0);  
-  textSize(32);
+  textSize(28);
   textFont(courierNew);
 
   let i = 0; 

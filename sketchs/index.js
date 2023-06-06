@@ -5,9 +5,9 @@ let style;
 function preload(){
 	font = loadFont("assets/CourierNew.ttf");  
     soundFormats('mp3', 'ogg');
-    type = loadSound('assets/typewriter.mp3');
-    fp1 = loadSound('assets/fp1');
-    fp2 = loadSound('assets/fp2');   
+    type = loadSound('media/typewriter.mp3');
+    fp1 = loadSound('media/fp1');
+    fp2 = loadSound('media/fp2');   
 }
 
 function setup() {      ;
