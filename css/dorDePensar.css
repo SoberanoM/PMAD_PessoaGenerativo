@@ -1,7 +1,5 @@
-/* style.css */
-
 html, body {
-  height: 90%;
+  height: 95%;
   overflow: hidden; /* Hide scrollbars */  
   background: #000000;
 }
@@ -22,12 +20,12 @@ canvas {
 
 .textFormat {
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     cursor: crosshair;
     font-family: 'Courier New';
     position: fixed;
     top: 20px;
-    left: 40px;    
+    left: 120px;    
 }
 
 #footerButtons {

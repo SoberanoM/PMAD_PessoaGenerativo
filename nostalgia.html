@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <!-- refresh da página ao fim de 90 seg-->
+    <meta http-equiv="REFRESH" content="30"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="assets/tomasx.ico">
+    <link rel="stylesheet" href="css/dorDePensar.css">
+
+<title>Dor de Pensar</title>
+
+<script src="libraries/p5.min.js"></script>
+<script src="libraries/p5.sound.min.js"></script>
+<script src="libraries/quicksettings.js"></script>
+<script src="libraries/p5.gui.js"></script>    
+<script type="text/javascript" src="libraries/jquery-latest.min.js"></script>      
+<script type="text/javascript" src="libraries/Poemario.js"></script>
+<script src="sketchs/dorDePensar.js"></script>
+</head>
+  
+  <body class="textFormat" id="body" onload="draw.txt_start();">
+    <video width="600" height="600" class="videoPosition" controls autoplay loop>
+      <source src="media/gato.mp4" type="video/mp4">     
+    </video>     
+  </body>
+  <footer id="footerButtons">    
+    <button type="button" onclick="draw.txt_stop_graceful();" class=" generateButtons button5">Parar texto</button>
+    <button type="button" onclick="draw.txt_resume();" class=" generateButtons button5">Retomar texto</button>
+    <button type="button" onclick="draw.audio_resume();" class="generateButtons button5">Retomar voz</button>
+    <button type="button" onclick="draw.audio_stop(false);" class=" generateButtons button5">Parar voz</button>  
+    <button type="button" onClick="location.href='generatePoetry.html'" class="generateButtons button5">Voltar</button> 
+  </footer>
+</html>

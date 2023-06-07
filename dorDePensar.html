@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <!-- refresh da página ao fim de 90 seg-->
-   <!-- <meta http-equiv="REFRESH" content="90"/> -->
+    <!-- <meta http-equiv="REFRESH" content="17"/> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="assets/tomasx.ico">
     <link rel="stylesheet" href="css/dorDePensar.css">
@@ -19,16 +19,16 @@
 <script src="sketchs/dorDePensar.js"></script>
 </head>
   
-  <body class="textFormat" id="body" onload="generate.txt_start();">
+  <body class="textFormat" id="body" onload="draw.txt_start();">
     <video width="600" height="600" class="videoPosition" controls autoplay loop>
       <source src="media/gato.mp4" type="video/mp4">     
     </video>     
   </body>
   <footer id="footerButtons">    
-    <button type="button" onclick="generate.txt_stop_graceful();" class=" generateButtons button5">Parar texto</button>
-    <button type="button" onclick="generate.txt_resume();" class=" generateButtons button5">Retomar texto</button>
-    <button type="button" onclick="generate.audio_resume();" class="generateButtons button5">Retomar voz</button>
-    <button type="button" onclick="generate.audio_stop(false);" class=" generateButtons button5">Parar voz</button>  
+    <button type="button" onclick="draw.txt_stop_graceful();" class=" generateButtons button5">Parar texto</button>
+    <button type="button" onclick="draw.txt_resume();" class=" generateButtons button5">Retomar texto</button>
+    <button type="button" onclick="draw.audio_resume();" class="generateButtons button5">Retomar voz</button>
+    <button type="button" onclick="draw.audio_stop(false);" class=" generateButtons button5">Parar voz</button>  
     <button type="button" onClick="location.href='generatePoetry.html'" class="generateButtons button5">Voltar</button> 
   </footer>
   

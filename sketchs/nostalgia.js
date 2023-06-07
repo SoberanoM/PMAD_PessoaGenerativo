@@ -1,5 +1,5 @@
 
-var draw = new Poemario(POEM_TYPED, FLOW_GROWING, TYPE_CHAR, 400, 50, ["assets/gato.xml"], 10, true, "assets");
+var draw = new Poemario(POEM_TYPED, FLOW_GROWING, TYPE_CONSTELLATION, 400, 50, ["assets/gato.xml"], 10, true, "assets");
 
 function preload(){    
     backgroundMusic = loadSound('media/WhereIsMyMind.mp3');    
@@ -15,4 +15,3 @@ function mouseClicked() {
    //fullscreen(true);
    //window.open("generatePoetry.html","_self"); 
 }
-

@@ -17,13 +17,11 @@ let poemI = 0
 let ptSize
 
 
-
 function preload(){ 
   font = loadFont('assets/CourierNew.ttf');  
   fragmentos = loadSound('media/fragmentacao.mp3');
   fragTxt = loadStrings("assets/fragmentacao.txt");
 }
-
 
 function setup() {
   myCanvas = createCanvas(1200, 800); 
@@ -63,7 +61,6 @@ function setup() {
   }
 }
 
-
 function draw() {
   Engine.update(engine)  
   for (var i = 0; i < wordBlock.length; i++) {
@@ -89,7 +86,6 @@ function mouseClicked(){
     fragmentosPlayed = true;
   }    
 }
-
 
 function pickWords(){
     if (mConstraint.body) {

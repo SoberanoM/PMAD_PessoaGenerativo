@@ -14,7 +14,7 @@ function preload(){
 function setup() {
   myCanvas = createCanvas(800, 800);
   fill(255); //text 
-  cursor(CROSS)
+  cursor(CROSS);
   // slice up text from source into array
   for (let i = 0; i < dadaDict.length; i++) {
     let pieces = split(dadaDict[i], " ");
@@ -27,77 +27,76 @@ function setup() {
     }
   }
 
-//detect witch button is clicked 
-document.querySelectorAll('button').forEach(occurence => {
-    let id = occurence.getAttribute('id');
-     occurence.addEventListener('click', function() {
-       console.log('The button with ID ' + id + ' was clicked!')    
-       switch (id) {
-         case 'nostalgia':           
-           btn = 'nostalgia';
-           break;
-           case 'fragmentacao':           
-           btn = 'fragmentacao';
-           break;
-           case 'dor':           
-           btn = 'dor';
-           break;
-           case 'fingimento':           
-           btn = 'fingimento';
-           break;
-           case 'dada':           
-           btn = 'dada';
-           break;
-           case 'restart':           
-           btn = 'restart';
-           break;   
-         default:
-           console.log(`Sorry, we are out of ${id}.`);
-       }      
-     } );
-   });
+    //detect witch button is clicked, and then execute options when mouse clicked
+    document.querySelectorAll('button').forEach(occurence => {
+        let id = occurence.getAttribute('id');
+        occurence.addEventListener('click', function() {
+          console.log('The button with ID ' + id + ' was clicked!')    
+          switch (id) {
+            case 'nostalgia':           
+              btn = 'nostalgia';
+              break;
+              case 'fragmentacao':           
+              btn = 'fragmentacao';
+              break;
+              case 'dor':           
+              btn = 'dor';
+              break;
+              case 'fingimento':           
+              btn = 'fingimento';
+              break;
+              case 'dada':           
+              btn = 'dada';
+              break;
+              case 'restart':           
+              btn = 'restart';
+              break;   
+            default:
+              console.log(`Sorry, we are out of ${id}.`);
+          }      
+        } );
+      });
   }
 
-  
-function draw() { 
- 
-}
 
-function download() {
-  saveCanvas(myCanvas,"PessoaGenerativo","png");
-}
-
-//detect witch button is pressed and execute new instructions
+//detect witch button is pressed and execute instructions
 function mouseClicked() { 
  // fullscreen(true);  
   switch (btn) {      
       case 'nostalgia':
-        setup();
-        console.log('develop next step');
+        setup();       
+        window.open("nostalgia.html","_self");
+        console.log('Generate new poem with poemario.js, from Pessoa words');
       break;
       case 'fragmentacao':
         setup();
         window.open("fragmentacao.html","_self");
-        console.log('Gerar texto com tema Fragemntação');
+        console.log('Generate text like concrete poetry, words falling inside rectangles, from Pessoa words');
       break;
       case 'dor':
         setup();
         window.open("dorDePensar.html","_self");
-        console.log('poems with poemario.js tutorial');
+        console.log('Generate new poem with poemario.js, from Pessoa words');
       break;
       case 'fingimento':
         setup();
         generateFingimentoText();
         shuffle(fingimentoDict, true);
+        console.log('Generate new poem with random lines from it');
       break;
       case 'dada':           
-        generateDadaText();      
+        generateDadaText();              
         loop();
+        console.log('Generate random text from Alexander Search words');
       break;     
       default:
         console.log("no button pressed");
         break;
     }      
+}
+
+function download() {
+  saveCanvas(myCanvas,"PessoaGenerativo","png");
 }
 
 function btnDada() {
@@ -107,7 +106,7 @@ function btnDada() {
 }
 
 
-// generate fingimento poetry
+// generate fingimento poetry with shuffle function
 function generateFingimentoText() {
   textFont(handWrite);
   textSize(44);
@@ -117,7 +116,7 @@ function generateFingimentoText() {
   }
 }
 
-// generate dada poetry
+// generate dada poetry, picking words from txt to array and generate new lines with random words
 function generateDadaText() {
   background(0);  
   textSize(20);

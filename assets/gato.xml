@@ -1,8 +1,12 @@
 <poema>
 
-<texto verso="Gato que brincas na rua como se fosse na cama" ordem="1,3,5,10" taxon="verso1,verso2,verso3,verso4,verso5"></texto>
+<texto verso="Gato que brincas na rua" ordem="1,3,5" taxon="verso1,verso2,verso3"></texto>
+<texto verso="Como se fosse na cama" ordem="5" taxon="verso4"></texto>
+<texto verso="Invejo a sorte que é tua" ordem="3" taxon="verso3"></texto>
+<texto verso="Porque nem sorte se chama" ordem="3" taxon="verso3"></texto>
+<texto verso="*" ordem="1" taxon="verso5"></texto>
 
-        <categorias>
+<categorias>
 
         <verso1>
                 <frase>Rato</frase>
@@ -34,7 +38,10 @@
                 <frase>rama</frase>
                 <frase>grama</frase>
         </verso4>       
+        <verso5>
+                <frase> </frase>                
+        </verso5>       
 
-        </categorias>
+</categorias>
 
 </poema>
