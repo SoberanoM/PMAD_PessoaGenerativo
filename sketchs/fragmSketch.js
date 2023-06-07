@@ -9,38 +9,31 @@ var engine
 var world
 var mConstraint
 var wordBlock = []
-var ground
-var boundaries = []
 
-const yAxis = 1
-let prevX, prevY
+var boundaries = []
+let words = [];
+let fragmentosPlayed = false;
 let poemI = 0
 let ptSize
-let bgCol
-
-
-let poem = "não sei quantas almas tenho cada momento mudei continuamente me estranho nunca me vi nem achei torno-me eles e não sou eu sou minha própria paisagem assisto à minha passagem";
 
 
 
 function preload(){ 
   font = loadFont('assets/CourierNew.ttf');  
   fragmentos = loadSound('media/fragmentacao.mp3');
+  fragTxt = loadStrings("assets/fragmentacao.txt");
 }
 
 
 function setup() {
-   myCanvas = createCanvas(800, 800);
- // var canvas = createCanvas(windowWidth, windowHeight)  
-  fill(255);
+   myCanvas = createCanvas(800, 800); 
+  fill(0);
   initialSize = min(width, height)
   cursor(CROSS)
   ptSize = windowHeight/15
   engine = Engine.create()
   world = engine.world
-  // Make Everything Float:
-  //engine.world.gravity.y = -1
-
+ 
 //  make a floor (new Boundary (x, y, width, height, angle)
   boundaries.push(new Boundary (width/2, height-5, width, 10, 0))
   boundaries.push(new Boundary (width/2, 5, width, 10, 0))
@@ -54,16 +47,24 @@ function setup() {
   }
   mConstraint = MouseConstraint.create(engine, options)
   World.add(world, mConstraint)  
+  fragmentos.onended(enableButton);
+
+   // slice up text from source into array
+   for (let i = 0; i < fragTxt.length; i++) {
+    let pieces = split(fragTxt[i], " ");
+    // Add the pieces to the larger array;
+    for (let j = 0; j < pieces.length; j++) {
+      let word = pieces[j];
+      if (word.length > 0) {
+        words = append(words, word);
+      }
+    }
+  }
 }
 
 
-
 function draw() {
-  Engine.update(engine)
-
-
-   //gradHeight = height/8
-  
+  Engine.update(engine) 
  
   for (var i = 0; i < wordBlock.length; i++) {
     wordBlock[i].show();
@@ -73,27 +74,28 @@ function draw() {
       wordBlock.splice(i, 1)
       i--
     }
-  }
-  
-  /*  for (var i = 0; i < boundaries.length; i++) {
-    boundaries[i].show();
-  }  */
-  
+  } 
 }
 
-
+function enableButton() { 
+   document.querySelector("#quit").style.visibility = "visible";  
+}
 
 function mouseClicked(){  
-  if (mConstraint.body) {
-     return
-  } 
-  let word = split(poem, ' ')
-  wordBlock.push(new Rectangle(mouseX, mouseY, this.w, this.h, word[poemI]))   
-  poemI = (poemI + 1) % poem.length
-  if (!fragmentos.isPlaying()) {
+  pickWords();  
+  if (!fragmentos.isPlaying() && fragmentosPlayed === false) {
     fragmentos.play();
-  } 
-  
+    fragmentosPlayed = true;
+  }   
+}
+
+function pickWords(){
+    if (mConstraint.body) {
+        return
+    }   
+    wordBlock.push(new Rectangle(mouseX, mouseY, this.w, this.h, words[poemI]))   
+    poemI = (poemI + 1) % words.length
+    console.log(words[poemI]);    
 }
 
 function download() {
@@ -101,22 +103,12 @@ function download() {
 }
 
 
-
-/*function windowResized() {
-  resizeCanvas(windowWidth, windowHeight)  
-}*/
-
-
-
+//draws rectangle with word inside to give efect of concrete poetry
 function Rectangle(x, y, w, h, poem) {
   var options = {
     friction: .8,
-    restitution: .4,
-    //angle : (random(0, -Math.PI))
-    //density: .001
-  }
-
-  
+    restitution: .4  
+}  
 
   // textToPoints(glyph, x, y, ptSize)
   this.ptSize = ptSize
@@ -126,8 +118,7 @@ function Rectangle(x, y, w, h, poem) {
 
   this.w = bounds.w
   this.h = bounds.h
-  //this.density = 100
-  
+   
   
   for (let pt of points){
     pt.x = pt.x - bounds.x - bounds.w/2
@@ -135,7 +126,7 @@ function Rectangle(x, y, w, h, poem) {
   }
   
   
-  // defining center, then defining bounds
+  // defining center, then defining bounds 
   this.body = Bodies.rectangle(x + bounds.w/2, y + bounds.h/2, bounds.w, bounds.h, options)
   
   this.poem = poem
@@ -158,9 +149,7 @@ function Rectangle(x, y, w, h, poem) {
     push();
     translate(pos.x, pos.y);
     rotate(angle);
-    rectMode(CENTER);
-    //noFill()
-    //strokeWeight(1)
+    rectMode(CENTER);   
     noStroke();
     fill(0); 
     rect(0, 0, this.bounds.w, this.bounds.h);
@@ -174,8 +163,6 @@ function Rectangle(x, y, w, h, poem) {
     pop();
   }
 }
-
-
 
 function Boundary(x, y, w, h, a) {
   var options = {
@@ -202,7 +189,6 @@ function Boundary(x, y, w, h, a) {
     fill(255);
     rect(0, 0, this.w, this.h);
     pop();
-
   }
 }
 

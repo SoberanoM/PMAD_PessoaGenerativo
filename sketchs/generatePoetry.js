@@ -14,7 +14,7 @@ function preload(){
 function setup() {
   myCanvas = createCanvas(800, 800);
   fill(255); //text 
-  
+  cursor(CROSS)
   // slice up text from source into array
   for (let i = 0; i < dadaDict.length; i++) {
     let pieces = split(dadaDict[i], " ");
@@ -58,9 +58,6 @@ document.querySelectorAll('button').forEach(occurence => {
    });
   }
 
-/*function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
-}*/
   
 function draw() { 
  
@@ -122,7 +119,7 @@ function generateFingimentoText() {
 // generate dada poetry
 function generateDadaText() {
   background(0);  
-  textSize(28);
+  textSize(20);
   textFont(courierNew);
 
   let i = 0; 
@@ -143,7 +140,7 @@ function generateDadaText() {
     spacing = " ";
     sentenceLength++;
       
-    // Print out a line every now and again...
+    // Print out a new line 
     if (sentenceLength > 10 || (random(sentenceLength) > 2.5 && word.length > 1)) {
       text(theLine, 20, (j * 40) + 50 + random(5)); 
       j++;

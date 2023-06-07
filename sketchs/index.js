@@ -13,7 +13,8 @@ function preload(){
 function setup() {      ;
     type.play(); 
     createCanvas(800, 800);
-    fp2.onended(enableButton);               
+    fp2.onended(enableButton); 
+    cursor(CROSS);              
 }
 
 function mouseMoved(event) {
