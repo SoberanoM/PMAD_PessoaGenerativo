@@ -1,7 +1,6 @@
 var titulo = "Pessoa Generativo.\n\n\n\"Como sabemos o que será, se nem ele sabe o que foi?\""
 let fp1, fp2;
 let voicePlayed = false;
-//let style;
 
 
 function preload(){
@@ -19,7 +18,7 @@ function setup() {      ;
     cursor(CROSS);              
 }
 
-function mouseMoved(event) {
+function mouseMoved(event) {     
     console.log(event);
     if (!type.isPlaying()) {
         type.play();      

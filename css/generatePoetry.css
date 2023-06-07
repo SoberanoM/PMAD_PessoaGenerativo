@@ -146,6 +146,7 @@ html, body {
     position: fixed;
     top: 80px;
     right: 150px;
+    border-radius: 18px;
   }
 
  

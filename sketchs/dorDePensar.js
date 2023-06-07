@@ -12,7 +12,7 @@ function setup() {
 }
 
 function mouseClicked() {    
-   fullscreen(true);
+   //fullscreen(true);
    //window.open("generatePoetry.html","_self"); 
 }
 

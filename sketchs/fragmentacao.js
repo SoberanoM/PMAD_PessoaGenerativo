@@ -26,7 +26,8 @@ function preload(){
 
 
 function setup() {
-  myCanvas = createCanvas(800, 800); 
+  myCanvas = createCanvas(1200, 800); 
+ // background(255)
   fill(0);
   initialSize = min(width, height)
   cursor(CROSS)

@@ -1,5 +1,3 @@
-/* style.css */
-
 html, body {
   height: 100%;
   background: #000000;
@@ -20,93 +18,6 @@ canvas {
   align-items: left;
 }
 
-/* INDEX CSS */
-
-/*.mouseMoveTip {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-} */
-
-.indexStartTip {  
-  /*text-transform: uppercase;*/
-  color: #fbfffbe2;
-  position: fixed;
-  top: 70px;
-  left: 400px;
-}
-
-.indexNextButton {
-  position: fixed;
-  bottom: 250px;
-  right: 620px;
-}
-
-/* INITIAL VIDEO CSS */
-
-.buttons {
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-.startVideo {
-  background-color: #2ae430;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 4px;
-  border-color: #000000;
-}
-
-.pauseVideo {
-  background-color: #3fb0d6;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 4px;
-  border-color: #000000;
-}
-
-.stopVideo {
-  background-color: #ba0028;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 4px;
-  border-color: #000000;
-}
-
-#videoButtons {
-  position: fixed;
-  top: 280px;
-  right: 30px;
-}
-
-
-/* GENERATE POETRY CSS */
-
-.nextButton {
-  position: fixed;
-  bottom: 20px;
-  right: 30px;
-}
-
-#footerButtons {
-  position: fixed;
-  bottom: 20px;
-  left: 100px;
-}
-
-.downloadButton {
-  position: fixed;
-  bottom: 20px;
-  right: 130px;
-}
-
 .generateButtons {    
   border-radius: 12px;
   color: white;
@@ -122,49 +33,6 @@ canvas {
   cursor: pointer;
 }
 
-.button1 {
-  background-color: rgb(199, 255, 221); 
-  color: black; 
-  border: 2px solid #4CAF50;
-}
-
-.button1:hover {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.button2 {
-  background-color: #a8def0; 
-  color: black; 
-  border: 2px solid #008CBA;
-}
-
-.button2:hover {
-  background-color: #008CBA;
-  color: white;
-}
-
-.button3 {
-  background-color: rgb(250, 192, 192); 
-  color: black; 
-  border: 2px solid #f44336;
-}
-
-.button3:hover {
-  background-color: #f44336;
-  color: white;
-}
-
-.button4 {
-  background-color: #e7e7e7;
-  color: black;
-  border: 2px solid #05050579;
-}
-
-.button4:hover {
-  background-color: #e7e7e779;
-  color: white;}
-
 .button5 {
   background-color: white;
   color: black;
@@ -176,43 +44,12 @@ canvas {
   color: white;
 }
 
-.button6 {
-  background-color: rgb(194, 151, 151);
-  color: black;
-  border: 2px solid #ab3405f0;
-}
-
-.button6:hover {
-  background-color: #ab3405f0;
-  color: white;
-}
-
-.button7 {
-  background-color: rgb(199, 246, 247);
-  color: black;
-  border: 2px solid #0595abf0;
-}
-
-.button7:hover {
-  background-color: #0595abf0;
-  color: white;
-}
-
-.button8 {
-  background-color: black;
-  color: white;
-  border: 2px solid #312e2eec;
-}
-
-.button8:hover {
-  background-color: white;
-  color: black;
-}
-
-.videoPosition {
+.indexNextButton {
   position: fixed;
-  top: 80px;
-  right: 150px;
+  bottom: 250px;
+  right: 620px;
 }
 
-/*FINAL VIDEO CSS*/
+.videoSettings {
+  border-radius: 18px;
+}
