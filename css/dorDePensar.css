@@ -1,0 +1,87 @@
+/* style.css */
+
+html, body {
+  height: 100%;
+  overflow: hidden; /* Hide scrollbars */  
+  background: #000000;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  /* Center sketch horizontally. */
+  justify-content: center;
+  /* Center sketch vertically. */
+  align-items: center;
+}
+
+canvas {
+  display: block;   
+  align-items: left;  
+}
+
+.textFormat {
+    color: white;
+    font-size: 20px;
+    cursor: crosshair;
+    font-family: 'Courier New';
+    position: fixed;
+    top: 20px;
+    left: 40px;    
+}
+
+.nextButton {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+}
+
+.downloadButton {
+  position: fixed;
+  bottom: 20px;
+  right: 130px;
+}
+
+.generateButtons {    
+  border-radius: 12px;
+  color: white;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}  
+
+.button5 {
+  background-color: white;
+  color: black;
+  border: 2px solid #312e2eec;
+}
+
+.button5:hover {
+  background-color: #00000072;
+  color: white;
+}  
+
+.button8 {
+  background-color: black;
+  color: white;
+  border: 2px solid #312e2eec;
+}
+
+.button8:hover {
+  background-color: white;
+  color: black;
+}
+
+ .videoPosition {
+    position: fixed;
+    top: 80px;
+    right: 150px;
+  }
+

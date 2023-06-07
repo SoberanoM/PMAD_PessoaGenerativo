@@ -1,6 +1,8 @@
 var titulo = "Pessoa Generativo.\n\n\n\"Como sabemos o que será, se nem ele sabe o que foi?\""
 let fp1, fp2;
-let style;
+let voicePlayed = false;
+//let style;
+
 
 function preload(){
 	font = loadFont("assets/CourierNew.ttf");  
@@ -26,8 +28,9 @@ function mouseMoved(event) {
 
 function mouseClicked(){   
     fullscreen(true); 
-    if (!fp2.isPlaying()) {
+    if (!fp2.isPlaying() && voicePlayed === false) {
         fp2.play();      
+        voicePlayed = true;
     } else {
         console.log("Pessoa is still thinking!!!");
     }               
@@ -35,8 +38,7 @@ function mouseClicked(){
 
 function enableButton() {
    // document.querySelector('#seguinte').disabled = true;
-    document.querySelector("#seguinte").style.visibility = "visible";
-    //document.querySelector("#seguinte").classList.add("generateButtons button5");
+    document.querySelector("#seguinte").style.visibility = "visible";   
 }
 
 

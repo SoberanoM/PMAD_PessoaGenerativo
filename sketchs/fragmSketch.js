@@ -26,7 +26,7 @@ function preload(){
 
 
 function setup() {
-   myCanvas = createCanvas(800, 800); 
+  myCanvas = createCanvas(800, 800); 
   fill(0);
   initialSize = min(width, height)
   cursor(CROSS)
@@ -64,8 +64,7 @@ function setup() {
 
 
 function draw() {
-  Engine.update(engine) 
- 
+  Engine.update(engine)  
   for (var i = 0; i < wordBlock.length; i++) {
     wordBlock[i].show();
     if (wordBlock[i].isOffScreen()){
@@ -86,8 +85,9 @@ function mouseClicked(){
   if (!fragmentos.isPlaying() && fragmentosPlayed === false) {
     fragmentos.play();
     fragmentosPlayed = true;
-  }   
+  }    
 }
+
 
 function pickWords(){
     if (mConstraint.body) {

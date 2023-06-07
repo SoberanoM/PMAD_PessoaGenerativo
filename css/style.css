@@ -3,6 +3,7 @@
 html, body {
   height: 100%;
   background: #000000;
+  overflow: hidden; /* Hide scrollbars */ 
 }
 
 body {

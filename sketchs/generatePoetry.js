@@ -82,7 +82,8 @@ function mouseClicked() {
       break;
       case 'dor':
         setup();
-        console.log('develop next step');
+        window.open("dorDePensar.html","_self");
+        console.log('poems with poemario.js tutorial');
       break;
       case 'fingimento':
         setup();
