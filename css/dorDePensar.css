@@ -30,16 +30,10 @@ canvas {
     left: 40px;    
 }
 
-.nextButton {
+#footerButtons {
   position: fixed;
   bottom: 20px;
-  right: 30px;
-}
-
-.downloadButton {
-  position: fixed;
-  bottom: 20px;
-  right: 130px;
+  right: 150px;
 }
 
 .generateButtons {    
@@ -54,7 +48,8 @@ canvas {
   font-size: 12px;
   margin: 4px 2px;
   transition-duration: 0.4s;
-  cursor: pointer;
+  cursor: pointer;  
+  bottom: 20px;
 }  
 
 .button5 {
@@ -68,20 +63,9 @@ canvas {
   color: white;
 }  
 
-.button8 {
-  background-color: black;
-  color: white;
-  border: 2px solid #312e2eec;
-}
-
-.button8:hover {
-  background-color: white;
-  color: black;
-}
-
- .videoPosition {
+.videoPosition {
     position: fixed;
-    top: 80px;
+    top: 40px;
     right: 150px;
-  }
+}
 

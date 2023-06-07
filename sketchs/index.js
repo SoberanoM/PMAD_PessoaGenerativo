@@ -27,7 +27,7 @@ function mouseMoved(event) {
 }
 
 function mouseClicked(){   
-    fullscreen(true); 
+   // fullscreen(true); 
     if (!fp2.isPlaying() && voicePlayed === false) {
         fp2.play();      
         voicePlayed = true;

@@ -1,5 +1,5 @@
 
-var pmr = new Poemario(POEM_TYPED, FLOW_GROWING, TYPE_CHAR, 400, 50, ["assets/poem1.xml"], 10, true, "assets");
+var generate = new Poemario(POEM_TYPED, FLOW_GROWING, TYPE_CHAR, 400, 50, ["assets/gato.xml"], 10, true, "assets");
 
 function preload(){    
     backgroundMusic = loadSound('media/WhereIsMyMind.mp3');    
@@ -12,6 +12,7 @@ function setup() {
 }
 
 function mouseClicked() {    
-   window.open("generatePoetry.html","_self"); 
+   fullscreen(true);
+   //window.open("generatePoetry.html","_self"); 
 }
 

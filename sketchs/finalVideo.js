@@ -15,5 +15,5 @@ function backToStart() {
 }
 
 function mouseClicked() {
-  fullscreen(true); 
+  //fullscreen(true); 
 }

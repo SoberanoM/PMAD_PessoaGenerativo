@@ -80,7 +80,8 @@ function enableButton() {
    document.querySelector("#quit").style.visibility = "visible";  
 }
 
-function mouseClicked(){  
+function mouseClicked(){ 
+  // fullscreen(true);   
   pickWords();  
   if (!fragmentos.isPlaying() && fragmentosPlayed === false) {
     fragmentos.play();

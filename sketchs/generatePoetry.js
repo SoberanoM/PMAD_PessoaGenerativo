@@ -69,7 +69,7 @@ function download() {
 
 //detect witch button is pressed and execute new instructions
 function mouseClicked() { 
-  fullscreen(true);  
+ // fullscreen(true);  
   switch (btn) {      
       case 'nostalgia':
         setup();
