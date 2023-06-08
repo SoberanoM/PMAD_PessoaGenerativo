@@ -1,5 +1,5 @@
 
-var pm = new Poemario(POEM_TYPED, FLOW_STATIC_ALL, TYPE_CHAR, 400, 60, ["assets/nostalgia.xml"], 10, true, "assets/nostalgiaSounds");
+var pmr = new Poemario(POEM_TYPED, FLOW_STATIC_ALL, TYPE_CHAR, 400, 60, ["assets/nostalgia.xml"], 10, true, "assets/nostalgiaSounds");
 
 var acceleration = 0.0098;
 var nDrops = 1000;
@@ -30,7 +30,7 @@ function mouseClicked() {
    //window.open("generatePoetry.html","_self"); 
 }
 
-function draw() {  
+function draw() {     
   clear();
   drops.forEach(function(d) {
     d.drawAndDrop();

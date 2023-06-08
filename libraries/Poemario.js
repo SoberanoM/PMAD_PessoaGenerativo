@@ -239,7 +239,7 @@ function Poemario(first_mode, flow_mode, type_mode, poem_speed, type_speed, list
 
         if (txt_running === undefined) {
             txt_running = RUNNING;
-            $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', 'css/Poemario.css'));
+          //  $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href', 'css/Poemario.css'));
             $("#body").append("<div id=\"free-top\"></div>");
             
             //index 0 will always be empty because we're using pnum as an index - it starts with 1
@@ -250,10 +250,10 @@ function Poemario(first_mode, flow_mode, type_mode, poem_speed, type_speed, list
                     $("#container" + String(i)).append("<canvas class=\"canvas\" id=\"canvas" + String(i) + "\" style=\"display: block;\"></canvas>");
                 timers.push(0);
                 timers.push(0);
-                window["block_counter" + i] = 0;
+                window["block_counter" + i] = 0;                
                 if (DEBUG) console.log("type_mode => " + String(_type_mode));
                 live.push(new Array());
-                go_poem(i, new Array(), timers.length - 2, timers.length - 1, true);
+                go_poem(i, new Array(), timers.length - 2, timers.length - 1, true);                
             }
         }
     };

@@ -17,6 +17,11 @@ html, body {
     display: block;   
     align-items: left;
   }
+
+  .textFormat {
+    right: 150 px
+  }
+
   
   /* GENERATE POETRY CSS */
 

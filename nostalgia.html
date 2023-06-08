@@ -19,16 +19,16 @@
 <script src="sketchs/nostalgia.js"></script>
 </head>
   
-  <body class="textFormat" id="body" onload="pm.txt_start();">
+<body class="textFormat" id="body" onload="pmr.txt_start();">
   <!--  <video width="600" height="600" class="videoPosition" controls autoplay loop>
       <source src="media/gato.mp4" type="video/mp4">     
     </video> -->    
   </body>
-  <footer id="footerButtons">    
-    <button type="button" onclick="pm.txt_stop_stateful();" class=" generateButtons button5">Parar texto</button>
-    <button type="button" onclick="pm.txt_resume();" class=" generateButtons button5">Retomar texto</button>
-    <button type="button" onclick="pm.audio_stop();" class=" generateButtons button5">Parar teclas</button>  
-    <button type="button" onclick="pm.audio_resume();" class="generateButtons button5">Retomar teclas</button>    
+  <footer id="footerButtons">    <!-- button functions from poemario.js-->
+    <button type="button" onclick="pmr.txt_stop_stateful();" class=" generateButtons button5">Parar texto</button>
+    <button type="button" onclick="pmr.txt_resume();" class=" generateButtons button5">Retomar texto</button>
+    <button type="button" onclick="pmr.audio_stop();" class=" generateButtons button5">Parar teclas</button>  
+    <button type="button" onclick="pmr.audio_resume();" class="generateButtons button5">Retomar teclas</button> 
     <button type="button" onClick="location.href='generatePoetry.html'" class="generateButtons button5">Voltar</button> 
   </footer>
 </html>

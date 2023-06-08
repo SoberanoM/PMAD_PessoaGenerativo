@@ -6,11 +6,13 @@ let btn;
 function preload(){ 
   handWrite = loadFont("assets/HandWrite.ttf");  
   anonymousPro = loadFont("assets/AnonymousPro.ttf");  
+  travesty = loadFont("assets/Travesty.ttf");
 	courierNew = loadFont("assets/CourierNew.ttf");  
   dadaDict = loadStrings("assets/alexSearch.txt");
   fingimentoDict = loadStrings('assets/fingimento.txt'); 
-  soundFormats('mp3', 'ogg');
-  alexSearch = loadSound('media/AlexSearch');
+  //soundFormats('mp3', 'ogg');
+  alexSearch = loadSound('media/AlexSearch.mp3');
+  tomas = loadSound('media/fingimento.wav');
 }
 
 function setup() {
@@ -67,6 +69,8 @@ function setup() {
 function mouseClicked() { 
   if (alexSearch.isPlaying() && btn != "dada") {
     alexSearch.stop();
+  } else if (tomas.isPlaying() && btn != "fingimento") {
+    tomas.stop();
   }
  // fullscreen(true);  
   switch (btn) {      
@@ -89,13 +93,16 @@ function mouseClicked() {
         setup();
         generateFingimentoText();
         shuffle(fingimentoDict, true);
+        if (!tomas.isPlaying()) {
+          tomas.play();          
+        }
         console.log('Generate new poem with random lines from it');
       break;
       case 'dada':           
         generateDadaText();              
         loop();
         if (!alexSearch.isPlaying()) {
-          alexSearch.play();
+          alexSearch.play();          
         }
         console.log('Generate random text from Alexander Search words');
       break;     
@@ -118,7 +125,7 @@ function btnDada() {
 
 // generate fingimento poetry with shuffle function
 function generateFingimentoText() {
-  textFont(handWrite);
+  textFont(travesty);
   textSize(32);
   for (let i = 0; i < fingimentoDict.length; i++) {
     fill(128+(i*10));
@@ -129,8 +136,8 @@ function generateFingimentoText() {
 // generate dada poetry, picking words from txt to array and generate new lines with random words
 function generateDadaText() {
   background(0);  
-  textSize(20);
-  textFont(courierNew);
+  textSize(22);
+  textFont(anonymousPro);
 
   let i = 0; 
   let j = 0;

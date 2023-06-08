@@ -9,6 +9,7 @@ function setup() {
     myCanvas = createCanvas(800, 800);    
     cursor(CROSS)
     backgroundMusic.play();
+    backgroundMusic.loop();
 }
 
 function mouseClicked() {    

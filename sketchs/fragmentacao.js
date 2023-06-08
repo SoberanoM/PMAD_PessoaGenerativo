@@ -14,11 +14,11 @@ var boundaries = []
 let words = [];
 let fragmentosPlayed = false;
 let poemI = 0
-let ptSize
+let txtSize
 
 
 function preload(){ 
-  font = loadFont('assets/CourierNew.ttf');  
+  font = loadFont('assets/AnonymousPro.ttf');  
   fragmentos = loadSound('media/fragmentacao.mp3');
   fragTxt = loadStrings("assets/fragmentacao.txt");
 }
@@ -29,7 +29,7 @@ function setup() {
   fill(0);
   initialSize = min(width, height)
   cursor(CROSS)
-  ptSize = windowHeight/15
+  txtSize = windowHeight/15
   engine = Engine.create()
   world = engine.world
  
@@ -62,15 +62,9 @@ function setup() {
 }
 
 function draw() {
-  Engine.update(engine)  
+  Engine.update(engine)  //drop words
   for (var i = 0; i < wordBlock.length; i++) {
-    wordBlock[i].show();
-    if (wordBlock[i].isOffScreen()){
-      // splice removes objects from screen
-      wordBlock[i].removeFromWorld()
-      wordBlock.splice(i, 1)
-      i--
-    }
+    wordBlock[i].show();    
   } 
 }
 
@@ -97,7 +91,7 @@ function pickWords(){
 }
 
 function download() {
-  saveCanvas(myCanvas,"Fragmentos","png");
+  saveCanvas(myCanvas,"Fragmentos","png");  
 }
 
 
@@ -108,11 +102,11 @@ function Rectangle(x, y, w, h, poem) {
     restitution: .4  
 }  
 
-  // textToPoints(glyph, x, y, ptSize)
-  this.ptSize = ptSize
+  // textToPoints(glyph, x, y, txtSize)
+  this.txtSize = txtSize
   this.poem = poemI
-  let points = font.textToPoints(poem, 0, 0, this.ptSize)
-  let bounds = font.textBounds(poem, 0, 0, this.ptSize)
+  let points = font.textToPoints(poem, 0, 0, this.txtSize)
+  let bounds = font.textBounds(poem, 0, 0, this.txtSize)
 
   this.w = bounds.w
   this.h = bounds.h
@@ -130,17 +124,12 @@ function Rectangle(x, y, w, h, poem) {
   this.poem = poem
   this.bounds = bounds
   World.add(world, this.body)
-
-  this.isOffScreen = function() {
-    var pos = this.body.position
-    return (pos.y > height + 20) 
-  }
   
   this.removeFromWorld = function(){
     World.remove(world, this.body)
   }
   
-  this.show = function() {
+    this.show = function() {
     var pos = this.body.position
     var angle = this.body.angle
 
@@ -154,7 +143,7 @@ function Rectangle(x, y, w, h, poem) {
     fill(255); 
     noStroke();
     textFont(font);
-    textSize(ptSize/2);
+    textSize(txtSize/2);
     textAlign(CENTER, CENTER);
     translate(0, 0);
     text(this.poem, 0, -this.bounds.h/5);
@@ -166,7 +155,7 @@ function Boundary(x, y, w, h, a) {
   var options = {
     friction: .3,
     restitution: .06,
-    isStatic: true,
+    isStatic: true, //keep words on screen
     angle: a
   }
 

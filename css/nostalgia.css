@@ -1,35 +1,30 @@
-/* style.css */
-
 html, body {
-    height: 95%;
-    overflow: hidden; /* Hide scrollbars */  
-    background: #000000;
-  }
-  
-  body {
-    margin: 0;
-    display: flex;
-    /* Center sketch horizontally. */
-    justify-content: center;
-    /* Center sketch vertically. */
-    align-items: center;    
-  }
-  
-  canvas {
-    background-color: #000000;
-    display: flex;
-    justify-content: right;   
-    align-items: right;
-  }
+  height: 95%;
+  overflow: hidden; /* Hide scrollbars */  
+  background: #000000;
+}
+
+body {  
+  display: flex;
+  /* Center sketch horizontally. */
+  justify-content: center;
+  /* Center sketch vertically. */
+  align-items: center;
+}
+
+canvas {
+  display: block;   
+  align-items: left;  
+}
   
   .textFormat {
       color: white;
       font-size: 20px;
       cursor: crosshair;
-      font-family: 'Courier New';
+      font-family: 'Papyrus';
       position: fixed;
-      top: 20px;
-      text-align: center;
+      top: 4px;      
+      text-align: center;      
   }
   
   #footerButtons {
