@@ -16,7 +16,7 @@ function setup() {
   
 
   //generate new drops every time, by adding it to array
-  for (i = 0; i < nDrops; i++) {
+for (i = 0; i < nDrops; i++) {
     drops.push(new Drop());
   }    
 }

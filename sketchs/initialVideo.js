@@ -15,40 +15,8 @@ function goToPoemario() {
 }
 
 function mouseClicked() {
-  fullscreen(true); 
+  //fullscreen(true); 
 }
 
 
-
-//não estão a ser utilizados
-
-/*
-function next() {
-  video.hide(); 
-}
-
-function playVideoIntro() { 
-  video.loop(); 
-  video.speed(1);
-}
-
-function stopVideoIntro() {
-  video.stop();
-}
-
-function pauseVideoIntro() {
-  video.pause();
-} 
-
-//starts and stops video with arrow up and down (optional)
-function keyPressed() {
-  if (keyCode === UP_ARROW) {
-    video.loop();
-    video.speed(1);
-  } else if (keyCode === DOWN_ARROW) {
-    video.stop();
-  }
-}
-
-*/
 
