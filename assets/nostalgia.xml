@@ -1,0 +1,167 @@
+<poema>
+
+<texto verso="Chove. Que fiz eu da vida?" ordem="1,6" taxon="verso1,verso2"></texto>
+<texto verso="Fiz o que ela fez de mim..." ordem="1,5" taxon="verso3,verso4"></texto>
+<texto verso="De pensada, a mal vivida..." ordem="2,5" taxon="verso6,verso7"></texto>
+<texto verso="Triste de quem é assim!" ordem="1" taxon="verso8"></texto>
+<texto verso="*" ordem="1" taxon="verso5"></texto>
+<texto verso="Numa angústia sem remédio" ordem="2,4" taxon="verso9,verso10"></texto>
+<texto verso="Tenho febre na alma, e, ao ser," ordem="2,4" taxon="verso11,verso12"></texto>
+<texto verso="Tenho saudade, entre o tédio," ordem="2,5" taxon="verso13,verso10"></texto>
+<texto verso="Só do que nunca quis ter..." ordem="4" taxon="verso14"></texto>
+<texto verso="*" ordem="1" taxon="verso5"></texto>
+<texto verso="Quem eu pudera ter sido," ordem="1,5" taxon="verso15,verso16"></texto>
+<texto verso="Que é dele? Entre ódios pequenos" ordem="5" taxon="verso17"></texto>
+<texto verso="De mim, estou de mim partido." ordem="6" taxon="verso18"></texto>
+<texto verso="Se ao menos chovesse menos!" ordem="4" taxon="verso19"></texto>
+<texto verso="*" ordem="1" taxon="verso5"></texto>
+
+<categorias>
+
+        <verso1>
+                <frase>Corri.</frase>
+                <frase>Fugi.</frase>
+                <frase>Escondi-me.</frase>
+                <frase>Perdi-me.</frase>
+        </verso1>
+
+        <verso2>
+                <frase>mala?</frase>
+                <frase>folha?</frase>
+                <frase>caneta?</frase>
+                <frase>história?</frase>
+                <frase>memória?</frase>
+        </verso2>
+
+        <verso3>
+                <frase>Disse</frase>
+                <frase>Escondi</frase>
+                <frase>Roubei</frase>
+                <frase>Perdi</frase>
+                <frase>Enganei</frase>
+        </verso3>
+
+        <verso4>
+                <frase>disse</frase>
+                <frase>escondeu</frase>
+                <frase>roubou</frase>
+                <frase>perdeu</frase>
+                <frase>enganou</frase>
+        </verso4>     
+
+        <verso5>
+                <frase> </frase>                
+        </verso5>   
+
+        <verso6>  
+                <frase>vivida,</frase>
+                <frase>roubada,</frase>
+                <frase>escondida,</frase>
+                <frase>perdida,</frase>
+                <frase>enganada,</frase>
+        </verso6>  
+
+        <verso7> 
+                <frase>pensada...</frase>
+                <frase>escondida...</frase>
+                <frase>perdida...</frase>
+                <frase>roubada...</frase>
+                <frase>desmantelada...</frase>
+        </verso7>     
+
+         <verso8> 
+                <frase>Malvado</frase>
+                <frase>Miserável</frase>
+                <frase>Sujo</frase>
+                <frase>Infame</frase>
+                <frase>Desgraçado</frase>
+                <frase>Vil</frase>
+                <frase>Burro</frase>
+                <frase>Pobre</frase>               
+        </verso8> 
+        <verso9> 
+                <frase>tristeza</frase>
+                <frase>frieza</frase>
+                <frase>angústia</frase>
+                <frase>firmeza</frase>
+                <frase>astúcia</frase>
+        </verso9>     
+
+         <verso10> 
+                <frase>tédio</frase>
+                <frase>remédio</frase>
+                <frase>intermédio</frase>
+                <frase>assédio</frase>
+                <frase>epicédio</frase>               
+        </verso10>      
+
+         <verso11> 
+                <frase>dor</frase>
+                <frase>peso</frase>
+                <frase>cansaço</frase>
+                <frase>destino</frase>
+                <frase>angústia</frase>
+        </verso11>     
+
+         <verso12> 
+                <frase>fala</frase>
+                <frase>memória</frase>
+                <frase>pele</frase>
+                <frase>emoção</frase>
+                <frase>mente</frase>               
+        </verso12>   
+
+        <verso13> 
+                <frase>falta</frase>
+                <frase>lembrança</frase>
+                <frase>memória</frase>
+                <frase>história</frase>
+                <frase>nostalgia</frase>               
+        </verso13>    
+
+        <verso14> 
+                <frase>sempre</frase>
+                <frase>às_vezes</frase>
+                <frase>antes</frase>
+                <frase>depois</frase>                           
+        </verso14>      
+
+        <verso15> 
+                <frase>Porque</frase>
+                <frase>Quem</frase>
+                <frase>Quando</frase>
+                <frase>Onde</frase>                           
+        </verso15>    
+
+        <verso16> 
+                <frase>feito</frase>
+                <frase>dito</frase>
+                <frase>escrito</frase>
+                <frase>lido</frase>                           
+        </verso16>     
+
+        <verso17> 
+                <frase>olhos</frase>
+                <frase>feitos</frase>
+                <frase>abraços</frase>
+                <frase>passos</frase>                           
+        </verso17>  
+
+        <verso18> 
+                <frase>perdido</frase>
+                <frase>esquecido</frase>
+                <frase>torcido</frase>
+                <frase>vendido</frase>                           
+        </verso18>   
+
+          <verso19>
+                <frase>corresse</frase>
+                <frase>fugisse</frase>
+                <frase>me_perdesse</frase>
+                <frase>me_escondesse</frase>
+                <frase>caísse</frase>
+                <frase>gritasse</frase>
+        </verso19>                
+</categorias>
+
+</poema>

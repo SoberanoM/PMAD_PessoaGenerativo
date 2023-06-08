@@ -142,7 +142,7 @@ html, body {
   
   .videoPosition {
     position: fixed;
-    top: 80px;
+    top: 40px;
     right: 150px;
     border-radius: 18px;
   }

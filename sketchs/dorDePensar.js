@@ -1,5 +1,5 @@
 
-var draw = new Poemario(POEM_TYPED, FLOW_GROWING, TYPE_CHAR, 400, 50, ["assets/gato.xml"], 10, true, "assets");
+var draw = new Poemario(POEM_TYPED, FLOW_STATIC_ALL, TYPE_LINE, 400, 50, ["assets/dor_de_pensar.xml"], 10, true, "assets/dorDePensarSounds");
 
 function preload(){    
     backgroundMusic = loadSound('media/WhereIsMyMind.mp3');    

@@ -1,0 +1,146 @@
+<poema>
+
+<texto verso="Gato que brincas na rua" ordem="1,3,5" taxon="verso1,verso2,verso3"></texto>
+<texto verso="Como se fosse na cama" ordem="5" taxon="verso4"></texto>
+<texto verso="Invejo a sorte que é tua" ordem="3" taxon="verso3"></texto>
+<texto verso="Porque nem sorte se chama" ordem="3" taxon="verso3"></texto>
+<texto verso="*" ordem="1" taxon="verso5"></texto>
+<texto verso="Bom servo das leis fatais" ordem="2,5" taxon="verso6,verso7"></texto>
+<texto verso="Que regem pedras e gentes," ordem="2,5" taxon="verso8,verso9"></texto>
+<texto verso="Que tens instintos gerais" ordem="3,4" taxon="verso10,verso7"></texto>
+<texto verso="E sentes só o que sentes." ordem="2" taxon="verso11"></texto>
+<texto verso="*" ordem="1" taxon="verso5"></texto>
+<texto verso="És feliz porque és assim," ordem="2" taxon="verso12"></texto>
+<texto verso="Todo o nada que és é teu." ordem="3" taxon="verso13"></texto>
+<texto verso="Eu vejo-me e estou sem mim," ordem="2,6" taxon="verso14,verso15"></texto>
+<texto verso="Conheço-me e não sou eu." ordem="1" taxon="verso16"></texto>
+<texto verso="*" ordem="1" taxon="verso5"></texto>
+
+<categorias>
+
+        <verso1>
+                <frase>Rato</frase>
+                <frase>Gato</frase>
+                <frase>Sapo</frase>
+                <frase>Sapato</frase>
+        </verso1>
+
+        <verso2>
+                <frase>corres</frase>
+                <frase>saltas</frase>
+                <frase>róis</frase>
+                <frase>comes</frase>
+                <frase>descansas</frase>
+        </verso2>
+
+        <verso3>
+                <frase>lua</frase>
+                <frase>água</frase>
+                <frase>terra</frase>
+                <frase>rua</frase>
+                <frase>grua</frase>
+        </verso3>
+
+         <verso4>
+                <frase>lama</frase>
+                <frase>chama</frase>
+                <frase>cama</frase>
+                <frase>rama</frase>
+                <frase>grama</frase>
+        </verso4>  
+
+        <verso5>
+                <frase> </frase>                
+        </verso5>  
+
+         <verso6> 
+                <frase>amigo</frase>
+                <frase>escravo</frase>
+                <frase>pensador</frase>
+                <frase>poeta</frase>
+                <frase>companheiro</frase>
+        </verso6>  
+
+         <verso7> 
+                <frase>desiguais</frase>
+                <frase>animais</frase>
+                <frase>ancestrais</frase>
+                <frase>canibais</frase>
+                <frase>capitais</frase>
+        </verso7> 
+
+         <verso8> 
+                <frase>partem</frase>
+                <frase>montam</frase>
+                <frase>seguram</frase>
+                <frase>desenham</frase>
+                <frase>escrevem</frase>
+        </verso8>   
+
+         <verso9> 
+                <frase>dentes</frase>
+                <frase>parentes</frase>
+                <frase>entes</frase>
+                <frase>sementes</frase>
+                <frase>serpentes</frase>
+        </verso9> 
+
+         <verso10> 
+                <frase>sentimentos</frase>
+                <frase>pensamentos</frase>
+                <frase>condições</frase>
+                <frase>olhares</frase>
+                <frase>movimentos</frase>
+        </verso10>  
+
+         <verso11> 
+                <frase>vês</frase>
+                <frase>ouves</frase>
+                <frase>fazes</frase>
+                <frase>sentes</frase>
+                <frase>pensas</frase>
+        </verso11> 
+
+        <verso12> 
+                <frase>contente</frase>
+                <frase>original</frase>
+                <frase>criança</frase>
+                <frase>inocente</frase>
+                <frase>ingénuo</frase>
+        </verso12>   
+
+        <verso13> 
+                <frase>momento</frase>
+                <frase>dia</frase>
+                <frase>minuto</frase>
+                <frase>mundo</frase>
+                <frase>segundo</frase>
+        </verso13>  
+
+          <verso14> 
+                <frase>sinto-me</frase>
+                <frase>ouço-me</frase>
+                <frase>esqueço-me</frase>
+                <frase>escondo-me</frase>
+                <frase>desdenho-me</frase>
+        </verso14>   
+
+          <verso15> 
+                <frase>ti</frase>
+                <frase>mim</frase>
+                <frase>tempo</frase>
+                <frase>vida</frase>
+                <frase>momentos</frase>
+        </verso15>   
+
+          <verso16> 
+                <frase>Sinto-me</frase>
+                <frase>Ouço-me</frase>
+                <frase>Revelo-me</frase>
+                <frase>Exponho-me</frase>
+                <frase>Espelho-me</frase>
+        </verso16>    
+
+</categorias>
+
+</poema>

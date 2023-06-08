@@ -9,12 +9,16 @@ function preload(){
 	courierNew = loadFont("assets/CourierNew.ttf");  
   dadaDict = loadStrings("assets/alexSearch.txt");
   fingimentoDict = loadStrings('assets/fingimento.txt'); 
+  soundFormats('mp3', 'ogg');
+  alexSearch = loadSound('media/AlexSearch');
 }
 
 function setup() {
-  myCanvas = createCanvas(800, 800);
+  myCanvas = createCanvas(800, 670);
+  
   fill(255); //text 
   cursor(CROSS);
+
   // slice up text from source into array
   for (let i = 0; i < dadaDict.length; i++) {
     let pieces = split(dadaDict[i], " ");
@@ -61,6 +65,9 @@ function setup() {
 
 //detect witch button is pressed and execute instructions
 function mouseClicked() { 
+  if (alexSearch.isPlaying() && btn != "dada") {
+    alexSearch.stop();
+  }
  // fullscreen(true);  
   switch (btn) {      
       case 'nostalgia':
@@ -87,6 +94,9 @@ function mouseClicked() {
       case 'dada':           
         generateDadaText();              
         loop();
+        if (!alexSearch.isPlaying()) {
+          alexSearch.play();
+        }
         console.log('Generate random text from Alexander Search words');
       break;     
       default:
@@ -101,7 +111,7 @@ function download() {
 
 function btnDada() {
     setup();
-    generateDadaText();      
+    generateDadaText();          
     loop();
 }
 
@@ -109,7 +119,7 @@ function btnDada() {
 // generate fingimento poetry with shuffle function
 function generateFingimentoText() {
   textFont(handWrite);
-  textSize(44);
+  textSize(32);
   for (let i = 0; i < fingimentoDict.length; i++) {
     fill(128+(i*10));
     text(fingimentoDict[i], 60, 50+i*30);
